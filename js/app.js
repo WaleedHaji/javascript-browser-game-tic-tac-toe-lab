@@ -1,38 +1,48 @@
 /*-------------------------------- Constants --------------------------------*/
-const valueX = ('X')
-const valueO = ('O')
+// const valueX = ('X')
+// const valueO = ('O')
 
-console.log(valueO, valueX)
+// console.log(valueO, valueX)
 
 /*---------------------------- Variables (state) ----------------------------*/
-let sqrZero = null
-let sqrOne = null
-let sqrTwo = null
-let sqrThree = null
-let sqrFour = null
-let sqrFive = null
-let sqrSix = null
-let sqrSeven = null
-let sqrEight = null
+let board = ['', '', '', '', '', '', '', '', ''];
 
-let playerOne = null
-let playerTwo = null
-let message = null
+let turn = 'X'
+
+let winner = false
+
+let tie = false
 
 /*------------------------ Cached Element References ------------------------*/
-const allSquareElements = document.querySelectorAll('.sqr')
+const squareEls = document.querySelectorAll('.sqr')
 
 const messageElements = document.querySelector('#message')
 
+console.log(squareEls)
+console.log(messageElements)
+
 /*-------------------------------- Functions --------------------------------*/
-function play (){
-    console.log(event.target.id)
+function init(){
+    console.log('game start')
 }
+
+function render(){
+    
+}
+
+init()
+
+
+// function clickedSquare (){
+//     console.log(event.target.id)
+// }
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-for(let oneSquareElements of allSquareElements){
-    oneSquareElements.addEventListener('click', play)
-}
+
+
+// for(let oneSquareElements of squareEls){
+//     oneSquareElements.addEventListener('click', clickedSquare)
+// }
 
 
