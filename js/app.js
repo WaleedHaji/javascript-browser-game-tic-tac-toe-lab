@@ -15,6 +15,9 @@ let sqrSix = null
 let sqrSeven = null
 let sqrEight = null
 
+let playerOne = null
+let playerTwo = null
+
 
 /*------------------------ Cached Element References ------------------------*/
 
