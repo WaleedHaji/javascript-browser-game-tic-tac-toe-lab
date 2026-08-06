@@ -20,12 +20,18 @@ const squareEls = document.querySelectorAll('.sqr')
 
 const messageElements = document.querySelector('#message')
 
+const resetBtnEl = document.querySelector('.btn')
+
 console.log(squareEls)
 console.log(messageElements.textContent)
 
 /*-------------------------------- Functions --------------------------------*/
 function init() {
     console.log('game start')
+    board = ['', '', '', '', '', '', '', '', ''];
+    turn = 'X';
+    winner = false;
+    tie = false;
     render()
 
 }
@@ -92,7 +98,7 @@ function checkForWinner(){
 }
 
 function checkForTie(){
-    if(!winner){
+    if(!winner && !board.includes('')){
         tie = true
     }
 }
@@ -105,7 +111,7 @@ function handleClick(event) {
 
     checkForWinner()
     checkForTie()
-    if (!winner){
+    if (!winner && !tie){
     switchTurn()}
     render()
 }
@@ -115,7 +121,7 @@ function handleClick(event) {
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-
+resetBtnEl.addEventListener('click', init);
 
 for (let oneSquareElements of squareEls) {
     oneSquareElements.addEventListener('click', handleClick)
