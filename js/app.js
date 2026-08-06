@@ -91,6 +91,11 @@ function checkForWinner(){
 
 }
 
+function checkForTie(){
+    if(!winner){
+        tie = true
+    }
+}
 
 function handleClick(event) {
     const squareIndex = event.target.id
@@ -99,7 +104,7 @@ function handleClick(event) {
     console.log(event.target.id)
 
     checkForWinner()
-    // checkForTie()
+    checkForTie()
     if (!winner){
     switchTurn()}
     render()
